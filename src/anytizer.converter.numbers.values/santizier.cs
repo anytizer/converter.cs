@@ -2,7 +2,7 @@
 
 namespace anytizer.converter.numbers.values
 {
-    public class santizier
+    public class Santizier
     {
         public string Sanitize(double number)
         {

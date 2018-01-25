@@ -12,13 +12,13 @@
         public string thousands { get; set; }
         public string hundreds { get; set; }
         public string tens { get; set; }
-        public string units { get; set; } // not required
+        public string units { get; set; } // not required, managed with tens upto 99
                                           // 12 34 56 78 90 98 765
 
         public void fill(string n)
         {
             int length = n.Length;
-            // if(length == 19) // errro, too long
+            // if(length > 19) // error, too long
             if (length >= 19) { padhma = n.Substring(length - 19, 2); }
             if (length == 18) { padhma = n.Substring(length - 18, 1); }
             if (length >= 17) { shankha = n.Substring(length - 17, 2); }
@@ -36,8 +36,7 @@
             if (length >= 5) { thousands = n.Substring(length - 5, 2); };
             if (length == 4) { thousands = n.Substring(length - 4, 1); }
             if (length >= 3) { hundreds = n.Substring(length - 3, 1); }
-            //if (length == 2) { tens = n.Substring(length - 2, 2); }
-            if (length > 1) { tens = n.Substring(length - 2, 2); }
+            if (length >= 2) { tens = n.Substring(length - 2, 2); }
             if (length == 1) { tens = n.Substring(length - 1, 1); }
             if (length == 0) { tens = "00"; }
         }
@@ -55,7 +54,7 @@
             output += " " + up.read(thousands, 4);
             output += " " + up.read(hundreds, 3);
             output += " " + up.read(tens, 2);
-            // when unit or tens, do not write last measurement
+            // when unit or tens, do not write last measurement units
 
             return output;
         }

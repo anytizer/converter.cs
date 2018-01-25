@@ -42,7 +42,7 @@
   <ItemGroup>
     <Compile Include="Devnagari.cs" />
     <Compile Include="NumberConverter.cs" />
-    <Compile Include="santizier.cs" />
+    <Compile Include="Santizier.cs" />
     <Compile Include="UnitsProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

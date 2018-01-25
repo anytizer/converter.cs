@@ -6,7 +6,7 @@ namespace anytizer.converter.numbers.values
     {
         public string ToDevnagari(string n)
         {
-            santizier s = new santizier();
+            Santizier s = new Santizier();
             n = s.Sanitize(n); // make sure
 
             Devnagari b = new Devnagari();
@@ -30,7 +30,7 @@ namespace anytizer.converter.numbers.values
         // https://msdn.microsoft.com/en-us/library/9cx8xs15.aspx
         public string ToDevnagari(double number)
         {
-            santizier s = new santizier();
+            Santizier s = new Santizier();
             string nliteral = s.Sanitize(number);
             string nwords = this.ToDevnagari(nliteral);
 

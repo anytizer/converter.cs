@@ -10,7 +10,7 @@ namespace anytizer.converter.tests
         [TestMethod()]
         public void SanitizeDecimalsTest()
         {
-            santizier s = new santizier();
+            Santizier s = new Santizier();
             string v = s.Sanitize("5.67");
 
             Assert.AreEqual("5", v);
@@ -19,7 +19,7 @@ namespace anytizer.converter.tests
         [TestMethod()]
         public void SanitizeDecimals2Test()
         {
-            santizier s = new santizier();
+            Santizier s = new Santizier();
             string v = s.Sanitize("5,001.97");
 
             Assert.AreEqual("5001", v);

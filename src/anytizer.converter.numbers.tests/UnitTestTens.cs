@@ -9,7 +9,7 @@ namespace anytizer.converter.tests
     {
        [TestMethod]
         [TestCategory("Conversion Test")]
-        public void TestMethod099()
+        public void TestMethod99()
         {
             NumberConverter nc = new NumberConverter();
             string value = nc.ToDevnagari(99);
@@ -23,6 +23,15 @@ namespace anytizer.converter.tests
             NumberConverter nc = new NumberConverter();
             string value = nc.ToDevnagari(31);
             Assert.AreEqual("एकतीस", value);
+        }
+
+        [TestMethod]
+        [TestCategory("Conversion Test")]
+        public void TestMethod50()
+        {
+            NumberConverter nc = new NumberConverter();
+            string value = nc.ToDevnagari(50);
+            Assert.AreEqual("पचास", value);
         }
     }
 }

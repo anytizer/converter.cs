@@ -17,7 +17,7 @@ namespace anytizer.converter.tests
         [TestMethod]
         public void TestMethod3()
         {
-            santizier s = new santizier();
+            Santizier s = new Santizier();
             string n = s.Sanitize("-1.00");
             Assert.AreEqual("1", n);
         }
